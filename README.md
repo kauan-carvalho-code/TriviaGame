@@ -1,6 +1,6 @@
-# Vite + React + Typescript + Eslint + Prettier
+# Trivia Game
 
-A starter for React with Typescript with the fast Vite and all static code testing with Eslint and formatting with Prettier.
+A knowledge test game
 
 ![Vite + React + Typescript + Eslint + Prettier](/resources/screenshot.png)
 
@@ -8,7 +8,7 @@ I found out about Vite and I wanted to have a boilerplate for the technologies t
 
 ## Installation
 
-Clone the repo and run `yarn install`
+Clone the repo and run `yarn`
 
 ## Start
 
