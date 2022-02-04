@@ -2,17 +2,16 @@
 import React, { ReactNode } from "react";
 import { ThemeProvider } from "styled-components";
 
-const lightTheme = {
+const darkTheme = {
   colors: {
     background: "#2E3440",
     dark600: "#4C566A",
     dark700: "#434C5E",
     dark800: "#3B4252",
-    text: "#FFFFFF",
-    snow300: "#E5E9F0",
-    snow400: "#181e29",
-    frost400: "#5E81AC",
-    purple200: "#B48EAD"
+    text: "#E5E9F0",
+    purple200: "#B48EAD",
+    correct: "#A3BE8C",
+    incorrect: "#BF616A"
   },
 };
 
@@ -22,7 +21,7 @@ interface AuxProps {
 
 export function Theme({ children }: AuxProps) {
   return (
-    <ThemeProvider theme={lightTheme}>
+    <ThemeProvider theme={darkTheme}>
       {children}
     </ThemeProvider>
   )

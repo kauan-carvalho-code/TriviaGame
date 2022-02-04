@@ -16,6 +16,8 @@ interface QuestionsProviderProps {
 
 interface QuestionsContextData {
   questions: IQuestions[];
+  filterQuestions: Function;
+  fetchQuestions: () => void;
 }
 
 const QuestionsContext = createContext<QuestionsContextData>({} as QuestionsContextData);
@@ -23,20 +25,33 @@ const QuestionsContext = createContext<QuestionsContextData>({} as QuestionsCont
 export function QuestionsProvider({ children }: QuestionsProviderProps) {
   const [questions, setQuestions] = useState<IQuestions[]>([]);
 
+  console.log(questions);
+
+  const fetchQuestions = () => {
+    axios.get('https://opentdb.com/api.php?amount=50').then((response) => {
+      setQuestions(response.data.results);
+    });
+  };
+
+  const filterQuestions = (value: number) => {
+    const filteredQuestions = questions.filter((_question, index) => index < value);
+    setQuestions(filteredQuestions);
+  };
+
   useEffect(() => {
     const timer = setTimeout(() => {
-      axios.get('https://opentdb.com/api.php?amount=100').then((response) => {
-        setQuestions(response.data.results);
-      });
+      fetchQuestions();
     }, 2000);
     return () => clearTimeout(timer);
   }, []);
 
-  return (
-    <QuestionsContext.Provider value={{ questions }}>
-      {children}
-    </QuestionsContext.Provider>
-  );
+  const value = {
+    filterQuestions,
+    fetchQuestions,
+    questions,
+  };
+
+  return <QuestionsContext.Provider value={value}>{children}</QuestionsContext.Provider>;
 }
 
 export function useQuestions() {

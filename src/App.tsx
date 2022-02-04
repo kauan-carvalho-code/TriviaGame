@@ -13,7 +13,7 @@ export function App() {
       <QuestionsProvider>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/game" element={<Game />} />
+          <Route path="/game/:numberOfQuestion" element={<Game />} />
         </Routes>
       </QuestionsProvider>
     </Theme>

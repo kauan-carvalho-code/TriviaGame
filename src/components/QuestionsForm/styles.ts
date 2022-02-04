@@ -18,6 +18,14 @@ export const Form = styled.div`
     border-radius: 0;
     height: 3rem;
   }
+
+  .correct {
+    background: ${(props) => props.theme.colors.correct};
+  }
+
+  .incorrect {
+    background: ${(props) => props.theme.colors.incorrect};
+  }
 `;
 
 export const Title = styled.h1`

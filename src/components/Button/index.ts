@@ -19,8 +19,9 @@ export const Button = styled.button<ButtonProps>`
   border: 0;
   outline: 0;
   margin: 0.1875rem 0 0.1875rem 1.25rem;
-  color: ${({ color }) => (color ? color : '#fff')};
-  background: ${({ background }) => (background ? background : '#fff')};
+  color: ${(props) => (props.color ? props.color : props.theme.colors.text)};
+  background: ${(props) =>
+    props.background ? props.background : props.theme.colors.purple200};
   height: ${({ height }) => (height ? `${height}px` : '100%')};
   width: ${({ width }) => (width ? `${width}px` : '100%')};
   cursor: pointer;
