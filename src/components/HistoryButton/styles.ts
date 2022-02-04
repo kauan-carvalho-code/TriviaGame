@@ -5,6 +5,7 @@ export const Container = styled.div`
   align-items: center;
   font-size: 22px;
   cursor: pointer;
+  transition: all 0.3s;
 
   svg {
     margin-right: 0.4rem;

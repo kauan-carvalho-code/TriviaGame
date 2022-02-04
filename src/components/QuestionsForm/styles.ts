@@ -14,7 +14,7 @@ export const Form = styled.div`
   button {
     width: 85%;
     margin: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     height: 3rem;
   }
 
@@ -35,7 +35,7 @@ export const Title = styled.h1`
 export const Input = styled.input`
   width: 85%;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   height: 3rem;
   background: ${(props) => props.theme.colors.dark800};
   color: ${(props) => props.theme.colors.text};
@@ -43,5 +43,6 @@ export const Input = styled.input`
   padding: 2px;
   border: 0;
   outline: 0;
+  border-radius: 8px;
   -moz-appearance: textfield;
 `;

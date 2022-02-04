@@ -18,6 +18,7 @@ export function App() {
           <Route path="/game/:numberOfQuestion" element={<Game />} />
           <Route path="/result" element={<Result />} />
           <Route path="/history" element={<History />} />
+          <Route path="/result/:id" element={<Result />} />
         </Routes>
       </QuestionsProvider>
     </Theme>

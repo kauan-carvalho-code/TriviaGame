@@ -11,7 +11,9 @@ export function HistoryButton() {
   return reports ? (
     <Container onClick={() => navigate('/history')}>
       <RiHistoryLine />
-      <span>HISTORY</span>
+      <span>
+        <em>History</em>
+      </span>
     </Container>
   ) : (
     <div></div>
