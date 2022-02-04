@@ -1,3 +1,4 @@
+// @ts-ignore
 import parse from 'html-react-parser';
 import React from 'react';
 

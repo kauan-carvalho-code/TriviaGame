@@ -1,5 +1,6 @@
 import { Button } from 'components/Button';
 import { useQuestions } from 'hooks/useQuestions';
+// @ts-ignore
 import parse from 'html-react-parser';
 import React, { FormEvent, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
