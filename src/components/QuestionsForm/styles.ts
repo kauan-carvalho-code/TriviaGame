@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Form = styled.div`
-  background: ${(props) => props.theme.colors.dark600};
-  width: 30vw;
+  background: ${(props) => props.theme.colors.card};
+  width: 30rem;
   border-radius: 8px;
   text-align: center;
 
@@ -15,7 +15,6 @@ export const Form = styled.div`
     width: 85%;
     margin: 0;
     margin-bottom: 2rem;
-    border-radius: 0;
     height: 3rem;
   }
 
@@ -30,7 +29,7 @@ export const Form = styled.div`
 
 export const Title = styled.h1`
   font-size: 24px;
-  margin: 2rem 0;
+  padding: 2rem 0;
 `;
 
 export const Input = styled.input`

@@ -1,7 +1,9 @@
 import axios from 'axios';
 import React, { createContext, ReactNode, useContext, useEffect, useState } from 'react';
+import { SetStateAction } from 'react';
+import { Dispatch } from 'react';
 
-interface IQuestions {
+export interface IQuestion {
   category: string;
   type: string;
   difficulty: string;
@@ -10,22 +12,30 @@ interface IQuestions {
   incorrect_answers: string[];
 }
 
+export interface IAnswer {
+  question: string;
+  correctAnswer: string;
+  answer: string;
+  isCorrect: boolean;
+}
+
 interface QuestionsProviderProps {
   children: ReactNode;
 }
 
 interface QuestionsContextData {
-  questions: IQuestions[];
+  questions: IQuestion[];
   filterQuestions: Function;
   fetchQuestions: () => void;
+  userAnswers: IAnswer[];
+  setUserAnswers: Dispatch<SetStateAction<IAnswer[]>>;
 }
 
 const QuestionsContext = createContext<QuestionsContextData>({} as QuestionsContextData);
 
 export function QuestionsProvider({ children }: QuestionsProviderProps) {
-  const [questions, setQuestions] = useState<IQuestions[]>([]);
-
-  console.log(questions);
+  const [questions, setQuestions] = useState<IQuestion[]>([]);
+  const [userAnswers, setUserAnswers] = useState<IAnswer[]>([]);
 
   const fetchQuestions = () => {
     axios.get('https://opentdb.com/api.php?amount=50').then((response) => {
@@ -49,6 +59,8 @@ export function QuestionsProvider({ children }: QuestionsProviderProps) {
     filterQuestions,
     fetchQuestions,
     questions,
+    userAnswers,
+    setUserAnswers,
   };
 
   return <QuestionsContext.Provider value={value}>{children}</QuestionsContext.Provider>;

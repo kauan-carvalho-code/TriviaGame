@@ -56,8 +56,6 @@ export function GameAlternatives({
         <Button
           className={alternative === correctAnswer ? 'correct' : 'incorrect'}
           value={alternative === correctAnswer ? 'correct' : 'incorrect'}
-          background="#B48EAD"
-          color="#ECEFF4"
           hover
           key={alternative}
           disabled={showAnswers}

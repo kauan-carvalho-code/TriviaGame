@@ -1,3 +1,4 @@
+import { Layout } from 'components/Layout';
 import { QuestionsForm } from 'components/QuestionsForm';
 import { useQuestions } from 'hooks/useQuestions';
 import React from 'react';
@@ -13,7 +14,9 @@ export function Home() {
       {questions.length === 0 ? (
         <Logo src={TriviaLogo} alt="Trivia Logo" />
       ) : (
-        <QuestionsForm />
+        <Layout>
+          <QuestionsForm />
+        </Layout>
       )}
     </Container>
   );

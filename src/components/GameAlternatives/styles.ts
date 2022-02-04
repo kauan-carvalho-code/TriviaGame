@@ -22,11 +22,11 @@ export const Container = styled.div<ContainerProps>`
       showAnswers &&
       css`
         &.correct {
-          background: #a3be8c;
+          background: ${(props) => props.theme.colors.correct};
         }
 
         &.incorrect {
-          background: #bf616a;
+          background: ${(props) => props.theme.colors.incorrect};
         }
       `}
   }

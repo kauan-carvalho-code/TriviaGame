@@ -18,6 +18,7 @@ export const Button = styled.button<ButtonProps>`
   padding: 0;
   border: 0;
   outline: 0;
+  border-radius: 8px;
   margin: 0.1875rem 0 0.1875rem 1.25rem;
   color: ${(props) => (props.color ? props.color : props.theme.colors.text)};
   background: ${(props) =>

@@ -8,6 +8,7 @@ const darkTheme = {
     dark600: "#4C566A",
     dark700: "#434C5E",
     dark800: "#3B4252",
+    card: "#55617a",
     text: "#E5E9F0",
     purple200: "#B48EAD",
     correct: "#A3BE8C",
