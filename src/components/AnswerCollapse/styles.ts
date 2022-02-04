@@ -32,6 +32,15 @@ export const Header = styled.div`
   padding: 0 1rem;
   cursor: pointer;
 
+  @media only screen and (max-width: 768px) {
+    font-size: 12px;
+
+    svg {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
   span {
     font-size: 18px;
     font-weight: bold;
@@ -57,6 +66,13 @@ export const Content = styled.div`
     border-radius: 8px;
     width: 40%;
     color: ${(props) => props.theme.colors.text};
+  }
+
+  @media only screen and (max-width: 768px) {
+    p {
+      padding: 0.5rem 0.7rem;
+      font-size: 12px;
+    }
   }
 
   &.isOpen {

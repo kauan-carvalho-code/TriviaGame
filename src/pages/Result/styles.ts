@@ -31,11 +31,22 @@ export const Content = styled.div`
   border-radius: 8px;
   text-align: center;
   margin: 8rem 0;
+  width: 90vw;
+  max-width: 760px;
 
   button {
     width: 40%;
     height: 3rem;
     margin-bottom: 1.2rem;
     margin-top: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1.8rem;
+
+    @media only screen and (max-width: 768px) {
+      font-size: 1.2rem;
+    }
   }
 `;

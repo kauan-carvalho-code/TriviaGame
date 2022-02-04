@@ -11,6 +11,10 @@ export const Header = styled.div`
   align-items: center;
   justify-content: space-around;
   font-weight: bold;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 
 export const Content = styled.div``;

@@ -25,4 +25,7 @@ export const Container = styled.div`
   );
 `;
 
-export const Logo = styled.img``;
+export const Logo = styled.img`
+  width: 90vw;
+  max-width: 666px;
+`;

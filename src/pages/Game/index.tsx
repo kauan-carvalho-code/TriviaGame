@@ -12,8 +12,6 @@ export function Game() {
   const { questions } = useQuestions();
   const { numberOfQuestion } = useParams();
 
-  console.log(question);
-
   useEffect(() => {
     if (questions && numberOfQuestion) {
       const CurrentQuestion = questions[+numberOfQuestion - 1];

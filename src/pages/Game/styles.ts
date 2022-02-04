@@ -31,7 +31,8 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   background: ${(props) => props.theme.colors.card};
-  width: 30rem;
   border-radius: 8px;
   text-align: center;
+  width: 90vw;
+  max-width: 30rem;
 `;

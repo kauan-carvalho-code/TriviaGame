@@ -33,8 +33,10 @@ export function Result() {
       return;
     }
 
-    if (reports.some((curr: IReport) => curr.id === +id)) {
-      return;
+    if (id) {
+      const reportExists = reports.some((curr: IReport) => curr.id === +id);
+
+      if (reportExists) return;
     }
 
     localStorage.setItem('reports', JSON.stringify([...reports, newReport]));

@@ -43,9 +43,20 @@ export const Exit = styled.div`
 
 export const Content = styled.div`
   background: ${(props) => props.theme.colors.card};
-  width: 30rem;
+  width: 90vw;
   border-radius: 8px;
+  max-width: 480px;
   text-align: center;
+  margin: 8rem 0;
+
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1.8rem;
+
+    @media only screen and (max-width: 768px) {
+      font-size: 1.2rem;
+    }
+  }
 `;
 
 export const HistoricList = styled.ul`
