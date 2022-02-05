@@ -22,7 +22,7 @@ export function History() {
         <ImExit />
       </Exit>
       <Content>
-        <h1>Historic</h1>
+        <h1>History</h1>
         <HistoricList>
           {reports.map((report: IReport, index: number) => (
             <HistoryLink
