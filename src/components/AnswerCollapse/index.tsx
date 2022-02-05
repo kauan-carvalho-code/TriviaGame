@@ -1,4 +1,3 @@
-// @ts-ignore
 import parse from 'html-react-parser';
 import React, { useState } from 'react';
 import { BsFillCheckCircleFill, BsFillXCircleFill } from 'react-icons/bs';
